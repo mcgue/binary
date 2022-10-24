@@ -1,9 +1,10 @@
 # Binary Search Algorithm
 
 # Get player name
-name = input('Let\'s play. Please enter your name: ')
+name = input('I will try to guess your number. Please enter your name: ')
 
 # Get number guess
+number = input('Please enter your guess: ')
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
