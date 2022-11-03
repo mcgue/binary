@@ -8,7 +8,7 @@ def print_hi(name):
     print(f'Hi, {name}')
 
 # Counter function
-def counter():
+def searcher():
     # Get number guess
     number = input('Please enter your guess: ')
     print(number)
