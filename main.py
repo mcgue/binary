@@ -10,11 +10,13 @@ def print_hi(name):
 # Counter function
 def searcher():
     # Get number guess
-    number = int(input('Please enter a number between 1 and 100: '))
-    if number < 50:
+    response = input('Is your number less than 50? Y or N ')
+    if response[0].upper() == 'Y':
         print('Your number is less than 50')
-    else:
+    elif response[0].upper() == 'N':
         print('Greater than or equal to 50')
+    else:
+        print('Please enter Y or N')
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
