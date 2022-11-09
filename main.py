@@ -9,15 +9,15 @@ def print_hi(name):
     # function to greet player
     print(f'Hi, {name}')
 
-def get_response():
-    confirm = input('Is your number less than 50? Y or N ')
+def get_response(num):
+    confirm = input('Is your number less than {}? Y or N '.format(num))
     confirm = confirm[0].upper()
     return confirm
 
 # Counter function
 def searcher():
     # Get number guess
-    response = get_response()
+    response = get_response(50)
     while response != 'Y' and response != 'N':
         response = get_response()
     if response == 'Y':
