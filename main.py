@@ -19,7 +19,7 @@ def searcher():
     # Get number guess
     response = get_response(50)
     while response != 'Y' and response != 'N':
-        response = get_response()
+        response = input('Please enter Y or N: ')
     if response == 'Y':
         response = input('Is it less than 25? Y or N ')
     elif response == 'N':
