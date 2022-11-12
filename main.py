@@ -1,8 +1,8 @@
 # Binary Search Algorithm
 
 # Get player name
-player = input('I will try to guess your number. Please enter your name: ')
-
+player = input('Choose a number between 0 and 100. I will try to guess your number. '
+               'First, please enter your name: ')
 
 # Greeting function
 def print_hi(name):
@@ -14,12 +14,17 @@ def get_response(num):
     confirm = confirm[0].upper()
     return confirm
 
-# Counter function
+# Function to verify valid response
+def check_valid(ans, num):
+    while ans != 'Y' and ans != 'N':
+        ans = get_response(num)
+    return ans
+
+# Function to guess number
 def searcher():
     # Get number guess
     response = get_response(50)
-    while response != 'Y' and response != 'N':
-        response = input('Please enter Y or N: ')
+    response = check_valid(response)
     if response == 'Y':
         response = input('Is it less than 25? Y or N ')
     elif response == 'N':
