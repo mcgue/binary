@@ -4,18 +4,15 @@
 player = input('Choose a number between 0 and 100. I will try to guess your number. '
                'First, please enter your name: ')
 
-# Greeting function
+# Get player name
 def print_hi(name):
     # function to greet player
     print(f'Hi, {name}')
 
+# Get valid response
 def get_response(num):
-    confirm = input('Is your number less than {}? Y or N '.format(num))
-    confirm = confirm[0].upper()
-    return confirm
-
-# Function to verify valid response
-def check_valid(ans, num):
+    ans = input('Is your number less than {}? Y or N '.format(num))
+    ans = ans[0].upper()
     while ans != 'Y' and ans != 'N':
         ans = get_response(num)
     return ans
@@ -24,9 +21,12 @@ def check_valid(ans, num):
 def searcher():
     # Get number guess
     response = get_response(50)
-    response = check_valid(response)
     if response == 'Y':
-        response = input('Is it less than 25? Y or N ')
+        response = get_response(25)
+        if response == 'Y':
+            print('Number less than 25')
+        else:
+            print('between 25 and 49')
     elif response == 'N':
         print('Greater than or equal to 50')
 
