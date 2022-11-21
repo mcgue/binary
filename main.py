@@ -24,7 +24,9 @@ def searcher():
     if response == 'Y':
         response = get_response(25)
         if response == 'Y':
-            print('Number less than 25')
+            response = get_response(12)
+            if response == 'Y':
+                print('Number less than 12')
         else:
             print('between 25 and 49')
     elif response == 'N':
