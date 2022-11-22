@@ -1,13 +1,17 @@
 # Binary Search Algorithm
+# User chooses a method
 
 # Get player name
-player = input('Choose a number between 0 and 100. I will try to guess your number. '
-               'First, please enter your name: ')
+def get_method():
+    def format_response():
+        response = input('Recursive or Iterative? R or I ')[0].upper()
+        return response
 
-# Get player name
-def print_hi(name):
-    # function to greet player
-    print(f'Hi, {name}')
+    # Choose recursive or iterative
+    method_type = format_response()
+    while method_type != 'R' and method_type != 'I':
+        method_type = format_response()
+    return method_type
 
 # Get valid response
 def get_response(num):
@@ -35,7 +39,6 @@ def searcher():
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi(player)
-    searcher()
+    print (get_method())
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
