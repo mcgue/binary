@@ -21,6 +21,13 @@ def get_response(num):
         ans = get_response(num)
     return ans
 
+# Get list to search
+def get_list():
+    print('What is the range for the list to search')
+    bot = int(input('Bottom of the range? '))
+    top = int(input('Top of the range?'))
+    return list(range(top, bot))
+
 # Function to guess number
 def searcher():
     # Get number guess
@@ -39,6 +46,7 @@ def searcher():
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print (get_method())
+    get_method()
+    print(get_list())
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
