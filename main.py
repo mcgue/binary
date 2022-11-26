@@ -25,8 +25,9 @@ def get_response(num):
 def get_list():
     print('What is the range for the list to search')
     bot = int(input('Bottom of the range? '))
-    top = int(input('Top of the range?'))
-    return list(range(top, bot))
+    top = int(input('Top of the range? '))
+    arr = list(range(top, bot))
+    return arr
 
 # Function to guess number
 def searcher():
@@ -46,7 +47,18 @@ def searcher():
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+    top = 1
+    bot = 2
     get_method()
-    print(get_list())
+    arr_search = get_list()
+    arr_search = list(range(top, bot))
+    a = [1, 2, 3, 4, 5]
+    # printing the list using loop
+    for x in range(len(a)):
+        print(a[x])
+
+    num_range = range(1, 4)
+    num_list = list(num_range)
+    print(num_list)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
