@@ -44,21 +44,14 @@ def searcher():
     elif response == 'N':
         print('Greater than or equal to 50')
 
+def rec_search():
+    statement = ('You selected recursive')
+    return statement
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    top = 1
-    bot = 2
-    get_method()
-    arr_search = get_list()
-    arr_search = list(range(top, bot))
-    a = [1, 2, 3, 4, 5]
-    # printing the list using loop
-    for x in range(len(a)):
-        print(a[x])
-
-    num_range = range(1, 4)
-    num_list = list(num_range)
-    print(num_list)
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    ans = get_method()
+    if ans == 'R':
+        print(rec_search())
+    else:
+        print('not R')
