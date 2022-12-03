@@ -13,21 +13,24 @@ def get_method():
         method_type = format_response()
     return method_type
 
-# Get valid response
-def get_response(num):
-    ans = input('Is your number less than {}? Y or N '.format(num))
-    ans = ans[0].upper()
-    while ans != 'Y' and ans != 'N':
-        ans = get_response(num)
-    return ans
-
 # Get list to search
 def get_list():
-    print('What is the range for the list to search')
+    print('What is the range to search')
     bot = int(input('Bottom of the range? '))
     top = int(input('Top of the range? '))
-    arr = list(range(top, bot))
-    return arr
+    if top == bot:
+        return top
+    else:
+        # create empty list
+        nums = []
+
+        # add to list until reach top
+        while (bot < top + 1):
+            nums.append(bot)
+            bot += 1
+
+        print(nums)
+        return nums
 
 # Function to guess number
 def searcher():
@@ -55,3 +58,5 @@ if __name__ == '__main__':
         print(rec_search())
     else:
         print('not R')
+
+    get_list()
