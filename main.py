@@ -15,6 +15,7 @@ def get_method():
 
 # Get list to search
 def get_list():
+    # try with range()
     print('What is the range to search')
     bot = int(input('Bottom of the range? '))
     top = int(input('Top of the range? '))
