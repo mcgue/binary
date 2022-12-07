@@ -30,7 +30,6 @@ def get_list():
             nums.append(bot)
             bot += 1
 
-        print(nums)
         return nums
 
 # Function to guess number
@@ -60,4 +59,4 @@ if __name__ == '__main__':
     else:
         print('not R')
 
-    get_list()
+    print(get_list())
