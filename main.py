@@ -59,4 +59,8 @@ if __name__ == '__main__':
     else:
         print('not R')
 
-    print(get_list())
+    #print(get_list())
+
+    print('What is the range to search')
+    bot = int(input('Bottom of the range? '))
+    top = int(input('Top of the range? '))
