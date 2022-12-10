@@ -13,25 +13,6 @@ def get_method():
         method_type = format_response()
     return method_type
 
-# Get list to search
-def get_list():
-    # try with range()
-    print('What is the range to search')
-    bot = int(input('Bottom of the range? '))
-    top = int(input('Top of the range? '))
-    if top == bot:
-        return top
-    else:
-        # create empty list
-        nums = []
-
-        # add to list until reach top
-        while (bot < top + 1):
-            nums.append(bot)
-            bot += 1
-
-        return nums
-
 # Function to guess number
 def searcher():
     # Get number guess
@@ -64,3 +45,6 @@ if __name__ == '__main__':
     print('What is the range to search')
     bot = int(input('Bottom of the range? '))
     top = int(input('Top of the range? '))
+    list_search = list(range(bot, top, 1))
+
+    print(list_search)
