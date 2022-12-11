@@ -28,23 +28,20 @@ def searcher():
     elif response == 'N':
         print('Greater than or equal to 50')
 
-def rec_search():
-    statement = ('You selected recursive')
-    return statement
+def rec_search(arr):
+    x = 'recursive'
+    return x
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    ans = get_method()
-    if ans == 'R':
-        print(rec_search())
-    else:
-        print('not R')
-
-    #print(get_list())
-
     print('What is the range to search')
     bot = int(input('Bottom of the range? '))
     top = int(input('Top of the range? '))
     list_search = list(range(bot, top, 1))
 
-    print(list_search)
+    ans = get_method()
+    if ans == 'R':
+        print(rec_search(list_search))
+    else:
+        print('not R')
+
