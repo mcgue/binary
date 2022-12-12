@@ -1,5 +1,7 @@
 # Binary Search Algorithm
-# User chooses a method
+# import secrets for random number
+import secrets
+
 
 # Get player name
 def get_method():
@@ -31,18 +33,18 @@ def searcher():
 def rec_search(arr):
     high = arr[-1]
     low = arr[0]
+    #if high >= low:
+
     return high, low
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print('What is the range to search?')
+    print('What is the range to search? Please enter a number!')
     bot = int(input('Lowest number? '))
     top = int(input('Highest number? '))
     list_search = list(range(bot, top+1, 1))
+    x = secrets.randbelow(top+1)
+    print (x)
+    print(rec_search(list_search))
 
-    ans = get_method()
-    if ans == 'R':
-        print(rec_search(list_search))
-    else:
-        print('not R')
 
