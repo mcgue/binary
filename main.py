@@ -29,15 +29,16 @@ def searcher():
         print('Greater than or equal to 50')
 
 def rec_search(arr):
-    x = 'recursive'
-    return x
+    high = arr[-1]
+    low = arr[0]
+    return high, low
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print('What is the range to search')
-    bot = int(input('Bottom of the range? '))
-    top = int(input('Top of the range? '))
-    list_search = list(range(bot, top, 1))
+    print('What is the range to search?')
+    bot = int(input('Lowest number? '))
+    top = int(input('Highest number? '))
+    list_search = list(range(bot, top+1, 1))
 
     ans = get_method()
     if ans == 'R':
