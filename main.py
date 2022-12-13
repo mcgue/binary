@@ -30,12 +30,12 @@ def searcher():
     elif response == 'N':
         print('Greater than or equal to 50')
 
-def rec_search(arr):
+def rec_search(arr, x):
     high = arr[-1]
     low = arr[0]
     #if high >= low:
 
-    return high, low
+    return high, low, x
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
@@ -44,7 +44,6 @@ if __name__ == '__main__':
     top = int(input('Highest number? '))
     list_search = list(range(bot, top+1, 1))
     x = secrets.randbelow(top+1)
-    print (x)
-    print(rec_search(list_search))
+    print(rec_search(list_search, x))
 
 
