@@ -33,9 +33,17 @@ def searcher():
 def rec_search(arr, x):
     high = arr[-1]
     low = arr[0]
-    #if high >= low:
+    # Calculate half point
+    if high >= low:
+        mid = (high + low) // 2
 
-    return high, low, x
+        # Check if already matches
+        if arr[mid] == x:
+            return x
+        else:
+            return mid
+
+
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
