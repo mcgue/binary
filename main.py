@@ -39,9 +39,13 @@ def rec_search(arr, x):
 
         # Check if already matches
         if arr[mid] == x:
-            return x
-        else:
             return mid
+        elif arr[mid] > x:
+            mid = mid-1
+            return rec_search(arr, x)
+        else:
+            y = 'above mid'
+            return y, mid
 
 
 
@@ -53,5 +57,6 @@ if __name__ == '__main__':
     list_search = list(range(bot, top+1, 1))
     x = secrets.randbelow(top+1)
     print(rec_search(list_search, x))
+    print(x)
 
 
