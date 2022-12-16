@@ -47,9 +47,7 @@ def rec_search(arr, x):
             y = 'above mid'
             return y, mid
 
-
-
-# Press the green button in the gutter to run the script.
+# Run if main
 if __name__ == '__main__':
     print('What is the range to search? Please enter a number!')
     bot = int(input('Lowest number? '))
