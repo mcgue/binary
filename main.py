@@ -2,37 +2,7 @@
 # import secrets for random number
 import secrets
 
-
-# Get player name
-def get_method():
-    def format_response():
-        response = input('Recursive or Iterative? R or I ')[0].upper()
-        return response
-
-    # Choose recursive or iterative
-    method_type = format_response()
-    while method_type != 'R' and method_type != 'I':
-        method_type = format_response()
-    return method_type
-
-# Function to guess number
-def searcher():
-    # Get number guess
-    response = get_response(50)
-    if response == 'Y':
-        response = get_response(25)
-        if response == 'Y':
-            response = get_response(12)
-            if response == 'Y':
-                print('Number less than 12')
-        else:
-            print('between 25 and 49')
-    elif response == 'N':
-        print('Greater than or equal to 50')
-
-def rec_search(arr, x):
-    high = arr[-1]
-    low = arr[0]
+def rec_search(arr, low, high, x):
     # Calculate half point
     if high >= low:
         mid = (high + low) // 2
@@ -40,12 +10,15 @@ def rec_search(arr, x):
         # Check if already matches
         if arr[mid] == x:
             return mid
+        # If middle larger, then do search on lower half
         elif arr[mid] > x:
-            mid = mid-1
-            return rec_search(arr, x)
+            return rec_search(arr, low, mid-1, x)
+        # If middle lower, then do search on upper half
         else:
-            y = 'above mid'
-            return y, mid
+            return rec_search(arr, mid+1, high, x)
+    # X not present
+    else:
+        return -1
 
 # Run if main
 if __name__ == '__main__':
@@ -54,7 +27,4 @@ if __name__ == '__main__':
     top = int(input('Highest number? '))
     list_search = list(range(bot, top+1, 1))
     x = secrets.randbelow(top+1)
-    print(rec_search(list_search, x))
-    print(x)
-
-
+    print('Found at index ' + str(rec_search(list_search, bot, top, x)))
