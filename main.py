@@ -4,6 +4,7 @@ import secrets
 
 def rec_search(arr, low, high, x):
     # Calculate half point
+    print(str(low) + ' ' + str(high))
     if high >= low:
         mid = (high + low) // 2
 
@@ -22,9 +23,19 @@ def rec_search(arr, low, high, x):
 
 # Run if main
 if __name__ == '__main__':
-    print('What is the range to search? Please enter a number!')
-    bot = int(input('Lowest number? '))
+    # Get range to search
+    print('What is the range to search? Please enter an integer.')
+    while True:
+        try:
+            bot = int(input('Lowest number? '))
+        except ValueError:
+            print("Please enter a valid integer")
+            continue
+        else:
+            print(f'You entered the low for the range: {bot}')
+            break
     top = int(input('Highest number? '))
     list_search = list(range(bot, top+1, 1))
+    # Generate number to search
     x = secrets.randbelow(top+1)
-    print('Found at index ' + str(rec_search(list_search, bot, top, x)))
+    print(str(x) + ' found at index ' + str(rec_search(list_search, bot, top, x)))
