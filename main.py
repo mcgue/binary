@@ -10,7 +10,7 @@ def rec_search(arr, low, high, x):
 
         # Check if already matches
         if arr[mid] == x:
-            return mid
+            return arr[mid]
         # If middle larger, then do search on lower half
         elif arr[mid] > x:
             return rec_search(arr, low, mid-1, x)
@@ -36,6 +36,7 @@ if __name__ == '__main__':
             break
     top = int(input('Highest number? '))
     list_search = list(range(bot, top+1, 1))
+    print(list_search)
     # Generate number to search
-    x = secrets.randbelow(top+1)
+    x = secrets.choice(list_search)
     print(str(x) + ' found at index ' + str(rec_search(list_search, bot, top, x)))
