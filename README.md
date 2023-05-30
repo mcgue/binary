@@ -1,2 +1,3 @@
 # Binary Search Function <br>
-## Finished.
+## Status: Finished.
+## Future: Simplify.
