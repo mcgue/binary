@@ -1,3 +1,3 @@
-# Binary Search Function
-### Status: finished
-### Future: simplify
+# binary
+Binary search. <br>
+Status: finished
