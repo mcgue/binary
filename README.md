@@ -1,3 +1,3 @@
 # binary
-Binary search. <br>
+Create a Recursive Binary Search Algorithm. <br>
 Status: finished
